@@ -17,6 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MuayThaiTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MuayThaiTrainerTests.m */; };
 		5087C96BCFF54EFEC11BDFB6 /* libPods-MuayThaiTrainerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA41E6FF58F73DAEBDA44C28 /* libPods-MuayThaiTrainerTests.a */; };
+		5659F7A723BBDBFF008C1957 /* GoogleService-Info-MuayThaiTrainer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5659F7A623BBDBFF008C1957 /* GoogleService-Info-MuayThaiTrainer.plist */; };
 		63B4AEB4D24D7C9A0B3F0472 /* libPods-MuayThaiTrainer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 764EB8B58EC9D778168752B5 /* libPods-MuayThaiTrainer-tvOSTests.a */; };
 		69CABE7C50541DE893BF2983 /* libPods-MuayThaiTrainer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 225249C72F1E420A76BD3CC8 /* libPods-MuayThaiTrainer-tvOS.a */; };
 		FA802A7CEAC79A3B3D557BBF /* libPods-MuayThaiTrainer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 619F7CF92ECFCE1301345989 /* libPods-MuayThaiTrainer.a */; };
@@ -55,6 +56,7 @@
 		2D02E47B1E0B4A5D006451C7 /* MuayThaiTrainer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MuayThaiTrainer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MuayThaiTrainer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MuayThaiTrainer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F9CB6F90A1E18F1C7347AE /* Pods-MuayThaiTrainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainerTests.release.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainerTests/Pods-MuayThaiTrainerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5659F7A623BBDBFF008C1957 /* GoogleService-Info-MuayThaiTrainer.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-MuayThaiTrainer.plist"; sourceTree = "<group>"; };
 		57F7284F115088D747179202 /* Pods-MuayThaiTrainer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer-tvOSTests/Pods-MuayThaiTrainer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		619F7CF92ECFCE1301345989 /* libPods-MuayThaiTrainer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuayThaiTrainer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654C8271EE429406743B1BF7 /* Pods-MuayThaiTrainer-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer-tvOSTests/Pods-MuayThaiTrainer-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5659F7A623BBDBFF008C1957 /* GoogleService-Info-MuayThaiTrainer.plist */,
 				13B07FAE1A68108700A75B9A /* MuayThaiTrainer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MuayThaiTrainerTests */,
@@ -194,7 +197,6 @@
 				81BE01708AFA270CEF93F051 /* Pods-MuayThaiTrainerTests.debug.xcconfig */,
 				36F9CB6F90A1E18F1C7347AE /* Pods-MuayThaiTrainerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,6 +233,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				E1E95199824E57D290E493F3 /* [CP-User] [RNFB] Core Configuration */,
+				6253B74850708C50C8DADB99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,6 +312,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -339,6 +343,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5659F7A723BBDBFF008C1957 /* GoogleService-Info-MuayThaiTrainer.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +435,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6253B74850708C50C8DADB99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuayThaiTrainer/Pods-MuayThaiTrainer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Cpp.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuayThaiTrainer/Pods-MuayThaiTrainer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8803018E282E002C6E8B9A4C /* [CP] Check Pods Manifest.lock */ = {
