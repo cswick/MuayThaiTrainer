@@ -17,7 +17,7 @@ export default class StrikeButton extends Component {
 
 var styles = StyleSheet.create({
     inputsContainer: {
-      flex: 1
+      flex: 1,
     },
     fullWidthButton: {
       backgroundColor: 'blue',
