@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Button, Text } from 'native-base';
+import { Container, Header, Content, Button, Text, View } from 'native-base';
 import StrikeButton from './ strikeButton';
 import firebase from 'react-native-firebase';
 
 export default class Combination extends Component {
     constructor(props){
         super(props);
-        this.strikes = firebase.firestore().collection('strikes')
+        this.strikes = firebase.firestore().collection('combinations');
         this.state = {
             loading: true,
             strikes: [],
@@ -18,36 +18,40 @@ export default class Combination extends Component {
     }
     
     componentWillUnmount() {
-    this.unsubscribe();
+      this.unsubscribe();
     }
 
 
     onCollectionUpdate = (querySnapshot) => {
     let strikes = [];
-    querySnapshot.forEach((strike) => {
-        const { name } = strike.data();
 
+    querySnapshot.forEach((strike) => {
+        const { name, moves } = strike.data();
+
+
+      moves.forEach((move) => {
         strikes.push({
-            key: strike.id,
-            name
-        });
+          name: move
+      });
+      })
     });
 
     this.setState({
         strikes,
         loading: false,
     })
-    }
 
+  }
     //TODO: get combos from database, load into data, build buttons based off data
   render() {
     return (
-      <Container>
-        <Header />
-        <Content>
-          <Button info><Text>{this.props.name}</Text></Button>
-        </Content>
-      </Container>
+        <View style={{ alignItems: 'center', justifyContent: 'space-between'}}>
+          {this.state.strikes.map((prop, key) => {
+            return (
+              <StrikeButton name={prop.name}></StrikeButton>
+            );
+          })}
+        </View>
     );
   }
 }

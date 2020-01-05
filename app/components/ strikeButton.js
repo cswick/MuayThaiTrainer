@@ -6,9 +6,9 @@ import { Text, View } from 'native-base';
 export default class StrikeButton extends Component {
   render() {
     return (
-        <View style={styles.inputsContainer}>
-            <TouchableHighlight style={styles.fullWidthButton}>
-                <Text style={styles.fullWidthButtonText}>{this.props.name}</Text>
+        <View>
+            <TouchableHighlight style={styles.button}>
+                <Text style={styles.buttonText}>{this.props.name}</Text>
             </TouchableHighlight>
         </View>
     );
@@ -16,33 +16,17 @@ export default class StrikeButton extends Component {
 }
 
 var styles = StyleSheet.create({
-    inputsContainer: {
-      flex: 1,
-    },
-    fullWidthButton: {
+    button: {
       backgroundColor: 'blue',
-      height:70,
-      flexDirection: 'row',
+      height:50,
       justifyContent: 'center',
       alignItems: 'center',
-      width: 90,
-      borderRadius: 10
+      width: 125,
+      borderRadius: 10,
+      marginTop: 7
     },
-    fullWidthButtonText: {
+    buttonText: {
       fontSize:24,
       color: 'white'
     },
-    input: {
-      paddingLeft: 15,
-      height: 40,
-      borderColor: 'black',
-      backgroundColor: 'white',
-    },
-    container: {
-      flex: 1,
-      backgroundColor: '#f0f0f0',
-      alignItems: 'stretch',
-    },
-    headline: {
-    }
   });
