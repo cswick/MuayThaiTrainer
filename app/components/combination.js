@@ -26,12 +26,13 @@ export default class Combination extends Component {
     let strikes = [];
 
     querySnapshot.forEach((strike) => {
-        const { name, moves } = strike.data();
+        const { name, moves, length } = strike.data();
 
 
-      moves.forEach((move) => {
+      moves.forEach((move, index) => {
         strikes.push({
-          name: move
+          name: move,
+          key: index
       });
       })
     });
@@ -42,13 +43,13 @@ export default class Combination extends Component {
     })
 
   }
-    //TODO: get combos from database, load into data, build buttons based off data
+
   render() {
     return (
-        <View style={{ alignItems: 'center', justifyContent: 'space-between'}}>
+        <View style={{ marginLeft: 15, alignItems: 'flex-start', justifyContent: 'space-between'}}>
           {this.state.strikes.map((prop, key) => {
             return (
-              <StrikeButton name={prop.name}></StrikeButton>
+              <StrikeButton key={prop.key} name={prop.name}></StrikeButton>
             );
           })}
         </View>
