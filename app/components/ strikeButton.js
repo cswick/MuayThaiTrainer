@@ -54,8 +54,18 @@ getButtonStyle(strike) {
                 marginTop: 7};
       break; 
 
-      case 'Hook':
+      case 'L Hook':
         return {backgroundColor:  '#008000',
+                height:50,
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: 125,
+                borderRadius: 10,
+                marginTop: 7};
+      break;
+
+      case 'R Hook':
+        return {backgroundColor:  '#660000',
                 height:50,
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -125,7 +135,7 @@ getButtonStyle(strike) {
       break;
 
       case 'L Kick':
-        return {backgroundColor:  '#a3666d',
+        return {backgroundColor:  '#000099',
                 height:50,
                 justifyContent: 'center',
                 alignItems: 'center',

@@ -5,43 +5,18 @@ import firebase from 'react-native-firebase';
 
 export default class Combination extends Component {
     constructor(props){
-        super(props);
-        this.strikes = firebase.firestore().collection('combinations');
-        this.state = {
-            loading: true,
-            strikes: [],
-        }
-    }
+      super(props);
+      this.state = {
+        strikes: this.props.data
+      };
+  }
 
-    componentDidMount() {
-        this.unsubscribe = this.strikes.onSnapshot(this.onCollectionUpdate);
-    }
-    
-    componentWillUnmount() {
-      this.unsubscribe();
-    }
-
-
-    onCollectionUpdate = (querySnapshot) => {
-    let strikes = [];
-
-    querySnapshot.forEach((strike) => {
-        const { name, moves, length } = strike.data();
-
-
-      moves.forEach((move, index) => {
-        strikes.push({
-          name: move,
-          key: index
+  componentDidUpdate(prevProps) {
+    if(prevProps.data != this.props.data) {
+      this.setState({
+        strikes: this.props.data
       });
-      })
-    });
-
-    this.setState({
-        strikes,
-        loading: false,
-    })
-
+    }
   }
 
   render() {
