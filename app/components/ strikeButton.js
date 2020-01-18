@@ -155,7 +155,13 @@ getButtonStyle(strike) {
       break;
 
       default:
-      return '#2F4F4F';
+      return {backgroundColor:  '#2F4F4F',
+      height:50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 125,
+      borderRadius: 10,
+      marginTop: 7}; 
   }
 }
 
