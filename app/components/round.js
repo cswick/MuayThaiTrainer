@@ -45,7 +45,7 @@ export default class Round extends Component {
       });
       })
 
-      comboLength = length * 60;
+      comboLength = length ? length * 60 : 0;
       comboType = type;
 
     this.setState({
