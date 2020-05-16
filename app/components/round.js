@@ -13,10 +13,11 @@ export default class Round extends Component {
             strikes: [],
             type: "",
             length: 0,
-            timerRunning: false
+            timerRunning: false,
         }
         this.strikes = firebase.firestore().collection('combinations').doc(props.id);
         this.onStartPressed = this.onStartPressed.bind(this);
+        this.onResetPressed = this.onResetPressed.bind(this);
     }
 
     componentDidMount() {
@@ -57,10 +58,20 @@ export default class Round extends Component {
 
   }
 
-  onStartPressed(){
+  onStartPressed() {
     this.setState({
       timerRunning: !this.state.timerRunning
     });
+  }
+
+  onResetPressed() {
+    const comboLength = this.state.length ? this.state.length : 0;
+
+    this.setState({
+      id: Math.random(),
+      timerRunning: false,
+      length: comboLength,
+    })
   }
 
   countdownFinished(){
@@ -73,7 +84,7 @@ export default class Round extends Component {
   render() {
     const test = this.state.length;
     return (
-        <Grid>
+        <Grid style={{backgroundColor: '#354e79'}}>
               <Col>
                 <Combination data={this.state.strikes}/>
               </Col>
@@ -81,7 +92,8 @@ export default class Round extends Component {
                 <Row>
                 <View style={{maringTop: 50}}>
                       <Countdown
-                        until={this.state.length }
+                        id={this.state.id}
+                        until={this.state.length}
                         onFinish={this.countdownFinished}
                         onPress={() => alert('hi"')}
                         size={35}
@@ -92,7 +104,7 @@ export default class Round extends Component {
                       />
                       <View style={{flexDirection: 'row', marginTop: 15}}>
                         <Button success style={{ marginRight: 30, textAlign: 'center'}} onPress={this.onStartPressed}><Text>{this.state.timerRunning ? 'Pause' : 'Start'}</Text></Button>
-                        <Button danger><Text>Stop</Text></Button>
+                        <Button danger onPress={this.onResetPressed}><Text>Reset</Text></Button>
                       </View>
                 </View>
                 </Row>

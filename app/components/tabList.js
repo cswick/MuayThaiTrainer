@@ -19,9 +19,9 @@ export default class TabList extends Component {
 
   render() {
     return (
-      <Container>
+      <Container contentContainerStyle={styles.container}>
         <Header hasTabs/>
-        <Tabs contentContainerStyle={{flex: 1}} renderTabBar={()=> <ScrollableTab />}>
+        <Tabs renderTabBar={()=> <ScrollableTab style={{ backgroundColor: "#473857" }}/>}>
           <Tab heading="Round 1"><Round id={'IMp4bbwmXPHs9R333fyi'} /></Tab>
           <Tab heading="Round 2"><Round id={'NMzleebKtcsUA82Ep290'} /></Tab>
           <Tab heading="Round 3"><Round id={'SLweXzGAMeEHG1o1CDxF'} /></Tab>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#657382'
   },
   welcome: {
     fontSize: 20,
