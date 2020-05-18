@@ -1,19 +1,27 @@
+import 'react-native-gesture-handler';
 import React, { Component, Menu } from 'react';
 import { AppRegistry } from 'react-native';
-import SideMenu  from 'react-native-side-menu';
 import TabList from './tabList';
+import Home from './home';
+import ListAll from './listAll';
 import { Text, View } from 'native-base';
-import 'react-native-gesture-handler';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 export default class MuayThaiTrainer extends Component {
   render() {
-     const menu = <View style={{backgroundColor: '#FF3344'}}><Text>Test</Text></View>;
+
+  const Stack = createStackNavigator();
 
     return (
-
-      <SideMenu menu={menu}>
-        <TabList />
-      </SideMenu>
+      <NavigationContainer>{
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Workout" component={TabList} />
+          <Stack.Screen name="ListAll" component={ListAll} />
+        </Stack.Navigator>
+      }
+      </NavigationContainer>
     );
   }
 }
