@@ -23,9 +23,13 @@ export default class Home extends Component {
             onPress={() => this.props.navigation.navigate('Workout')}>
                 <Text>Go To Workout</Text>
             </Button>
-            <Button style={{ margin: 10, justifyContent: 'center'}}
+            <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: '#f37735'}}
             onPress={() => this.props.navigation.navigate('ListAll')}>
                 <Text>View All Exercises</Text>
+            </Button>
+            <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'green'}}
+            onPress={() => this.props.navigation.navigate('AddExercise')}>
+                <Text>Add Exercise</Text>
             </Button>
        </View>
       );

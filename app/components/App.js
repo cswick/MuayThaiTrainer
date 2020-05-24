@@ -4,6 +4,7 @@ import { AppRegistry } from 'react-native';
 import TabList from './tabList';
 import Home from './home';
 import ListAll from './listAll';
+import AddExercise from './addExercise';
 import { Text, View } from 'native-base';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,6 +20,7 @@ export default class MuayThaiTrainer extends Component {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Workout" component={TabList} />
           <Stack.Screen name="ListAll" component={ListAll} />
+          <Stack.Screen name="AddExercise" component={AddExercise} />
         </Stack.Navigator>
       }
       </NavigationContainer>
