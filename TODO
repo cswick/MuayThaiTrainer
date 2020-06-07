@@ -1,0 +1,21 @@
+
+Todo:
+  Data Model:
+    ☐ Remove timer
+    ☐ Change "type" to "notes
+  GUI: 
+    ☐ Create workout
+      ☐ Add exercise to workout  
+      ☐ Custom length of round(time, number of reps, interval, etc.)
+
+    ☐ List of previous workouts(including date)
+
+    ☐ Round
+      ☐ Show timer if timed round, show reps otherwise
+      ☐ Add sounds(start, warning, end, interval, etc.)
+
+    ☐ Adding new exercise
+      ☐ Styling
+Done:
+
+

@@ -38,6 +38,12 @@ export default class AddExercise extends Component {
       })
       .catch(function(error) {
           console.error("Error writing document: ", error);
+          this.setState({
+            name: '',
+            length: '',
+            type: '',
+            moves: []
+          });
       });
       
       }

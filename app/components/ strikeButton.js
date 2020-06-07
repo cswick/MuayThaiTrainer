@@ -8,15 +8,6 @@ export default class StrikeButton extends Component {
   render() {
 
     var styles = StyleSheet.create({
-      button: {
-        backgroundColor: 'blue',
-        height:50,
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: 125,
-        borderRadius: 10,
-        marginTop: 7
-      },
       buttonText: {
         fontSize:24,
         color: 'white'
@@ -26,7 +17,7 @@ export default class StrikeButton extends Component {
     return (
         <View>
             <TouchableHighlight style={this.getButtonStyle(this.props.name)}>
-                <Text style={styles.buttonText}>{this.props.name}</Text>
+                <Text adjustsFontSizeToFit={true} style={styles.buttonText}>{this.props.name}</Text>
             </TouchableHighlight>
         </View>
     );
@@ -34,14 +25,16 @@ export default class StrikeButton extends Component {
 
 getButtonStyle(strike) {
     switch (strike) {
-      case 'Jab':
-        return {backgroundColor: '#FF8C00', 
+  /*    case 'Jab':
+        return { 
                 height:50,
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: 125,
                 borderRadius: 10,
-                marginTop: 7}
+                marginTop: 7,
+                borderColor: '#000',
+                borderWidth: 1};
       break;
 
       case 'Cross':
@@ -153,15 +146,17 @@ getButtonStyle(strike) {
                 borderRadius: 10,
                 marginTop: 7};
       break;
-
+*/
       default:
-      return {backgroundColor:  '#2F4F4F',
-      height:50,
+      return {height:50,
       justifyContent: 'center',
       alignItems: 'center',
-      width: 125,
+   //   width: 125,
+      padding: 10,
       borderRadius: 10,
-      marginTop: 7}; 
+      marginTop: 7,
+      borderColor: '#000',
+      borderWidth: 1}; 
   }
 }
 
