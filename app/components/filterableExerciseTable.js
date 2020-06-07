@@ -24,12 +24,15 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 
     render() {
       const tableData = [];
+      const filter = this.props.filterText;
       this.props.exercises.map((exercise, index) => {
         const rowData = [];
         const exerciseName = exercise._data.name ? exercise._data.name : exercise._data.moves.toString()
-        const exerciseType = exercise._data.type || '';
-        rowData.push([`${exerciseName}`]);
-        tableData.push(rowData);
+        if (exerciseName.indexOf(filter) > -1) {
+          const exerciseType = exercise._data.type || '';
+          rowData.push([`${exerciseName}`]);
+          tableData.push(rowData);
+        }
       })
 
       const element = (data, index) => (
@@ -76,13 +79,10 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
       super(props);
       this.handleFilterTextInputChange = this.handleFilterTextInputChange.bind(this);
 
-      this.state={
-          name: '',
-      }
     }
     
-    handleFilterTextInputChange(e) {
-      this.props.onFilterTextInput(e.target.value);
+    handleFilterTextInputChange(text) {
+      this.props.onFilterTextInput(text);
     }
   
     render() {
@@ -94,8 +94,8 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
             <Item floatingLabel>
               <Label>Search for Combination or Exercise</Label>
               <Input 
-                onChangeText={(text) => this.setState({filterText: text})} 
-                value={this.state.name} 
+                onChangeText={this.handleFilterTextInputChange} 
+                value={this.props.filterText} 
               />
             </Item>
           </Form>
@@ -133,27 +133,6 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
       });
     }
 
-    onCollectionUpdate = (querySnapshot) => {
-      let exercises = [];
-  
-      const { name, moves, type } = querySnapshot._data;
-  
-      //for each combination, make a new list element
-        moves.forEach((move, index) => {
-          strikes.push({
-            name: move,
-            key: index
-        });
-        })
-  
-      this.setState({
-          loading: false,
-          type: comboType,
-      })
-  
-    }
-
-  
     handleFilterTextInput(filterText) {
       this.setState({
         filterText: filterText
