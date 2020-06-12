@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 import { Container, 
     Header, 
     Content, 
@@ -35,25 +35,22 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
         }
       })
 
-      const element = (data, index) => (
-        <TouchableOpacity>
-          <View style={StyleSheet.btn}>
-            <Text style={StyleSheet.btnText}>button</Text>
-          </View>
-        </TouchableOpacity>
-      );
-
       return (
         <View style={styles.container}>
           <ScrollView>
           <Table borderStyle={{borderColor: 'transparent'}}>
-            <Row data={this.state.tableHead} style={styles.head} textStyle={styles.text}/>
+            <Row data={this.state.tableHead} style={styles.head}/>
             {
               tableData.map((rowData, index) => (
                 <TableWrapper key={index} style={styles.row}>
                   {
                     rowData.map((cellData, cellIndex) => (
-                      <Cell key={cellIndex} data={cellIndex === 3 ? element(cellData, index) : cellData} textStyle={styles.text}/>
+                      <TouchableOpacity key={cellIndex} onPress={() => this.props.addToRounds(cellData)}>
+                        <View>
+                          <Text widthArr={[80]} style={styles.text}>{cellData}</Text>
+                        </View>
+                      </TouchableOpacity>
+                      
                     ))
                   }
                 </TableWrapper>
@@ -63,14 +60,6 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
           </ScrollView>
         </View>
       )
-
-     {/*} this.props.exercises.forEach((exercise, index) => {
-        const exerciseName = exercise._data.name ? exercise._data.name : exercise._data.moves.toString();
-        const exerciseType = exercise._data.type || '';
-        if (exerciseName.indexOf(this.props.filterText) === -1) {
-          return;
-        }
-    }*/ }
   }
   }
   
@@ -149,6 +138,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
           <ExerciseTable
             exercises={this.state.exercises}
             filterText={this.state.filterText}
+            addToRounds={this.props.addToRounds}
           />
         </View>
       );
@@ -158,7 +148,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
   const styles = StyleSheet.create({
     container: { flex: 1, paddingTop: 30, backgroundColor: '#fff' },
     head: { height: 25, backgroundColor: '#808B97' },
-    text: { fontSize: 13 },
+    text: { fontSize: 13, paddingTop: 15 },
     row: { flexDirection: 'row', height: 50, borderBottomColor: '#000', borderBottomWidth: 1},
     btn: { width: 58, height: 18, backgroundColor: '#78B7BB',  borderRadius: 2 },
     btnText: { textAlign: 'center', color: '#fff' }
