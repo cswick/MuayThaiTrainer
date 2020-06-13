@@ -30,7 +30,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
         const exerciseName = exercise._data.name ? exercise._data.name : exercise._data.moves.toString()
         if (exerciseName.indexOf(filter) > -1) {
           const exerciseType = exercise._data.type || '';
-          rowData.push([`${exerciseName}`]);
+          rowData.push({name: exerciseName, id: exercise.id});
           tableData.push(rowData);
         }
       })
@@ -47,7 +47,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
                     rowData.map((cellData, cellIndex) => (
                       <TouchableOpacity key={cellIndex} onPress={() => this.props.addToRounds(cellData)}>
                         <View>
-                          <Text widthArr={[80]} style={styles.text}>{cellData}</Text>
+                          <Text widthArr={[80]} style={styles.text}>{cellData.name}</Text>
                         </View>
                       </TouchableOpacity>
                       

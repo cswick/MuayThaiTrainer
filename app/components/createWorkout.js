@@ -26,17 +26,21 @@ export default class CreateWorkout extends Component {
           rounds: [],
         };
 
-        this.onAddClick = this.onAddClick.bind(this);
+        this.onSaveClick = this.onSaveClick.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
         this.renderContent = this.renderContent.bind(this);
         this.addToRounds = this.addToRounds.bind(this);
+        this.updateRoundNotes = this.updateRoundNotes.bind(this);
+        this.updateRoundLength = this.updateRoundLength.bind(this);
       }
 
-  onAddClick() {
+  onSaveClick() {
     firebase.firestore().collection('workouts').doc().set({
+      name: this.state.name,
+      rounds: this.state.rounds
     })
     .then(function() {
-        console.log("Workout successfully written!");
+        Alert.alert('Workout Saved');
     })
     .catch(function(error) {
         console.error("Error writing document: ", error);
@@ -49,7 +53,8 @@ export default class CreateWorkout extends Component {
       this.setState({
         rounds: [{
           title: 'Round 1',
-          content: round[0]
+          content: round.name,
+          id: round.id
         }]
       })
     } else {
@@ -57,11 +62,26 @@ export default class CreateWorkout extends Component {
       this.setState({
         rounds: [...this.state.rounds, {
           title: 'Round ' + nextRound,
-          content: round[0]
+          content: round.name,
+          id: round.id
         }]
       })
     }
   }
+
+  updateRoundLength(id, value) {
+   this.setState(prevState => ({
+     rounds: prevState.rounds.map(round => (round.id === id? { ...round, 'length': value }: round))
+   }))
+
+  }
+
+  updateRoundNotes(id, value) {
+    this.setState(prevState => ({
+      rounds: prevState.rounds.map(round => (round.id === id? { ...round, 'notes': value }: round))
+    }))
+ 
+   }
 
   confirmDeleteFromRounds(round) {
     Alert.alert(
@@ -126,14 +146,14 @@ export default class CreateWorkout extends Component {
         <TextInput
           ref={input => {this.textInput = input}}
           placeholder="Length/Reps"
-          onChangeText={data => this.setState({ newMove: data })}
+          onChangeText={data => this.updateRoundLength(item.id, data)}
           style={{ padding: 10, width: '100%',  backgroundColor: "#e3f1f1", borderTopWidth: 1, borderColor: 'black'}}
         
         />
         <TextInput
           ref={input => {this.textInput = input}}
           placeholder="Notes"
-          onChangeText={data => this.setState({ newMove: data })}
+          onChangeText={data => this.updateRoundNotes(item.id, data )}
           style={{ padding: 10, width: '100%', backgroundColor: "#e3f1f1", borderTopWidth: 1, borderColor: 'black'}}
        />
       </View>
@@ -145,12 +165,14 @@ export default class CreateWorkout extends Component {
       <Container>
         <Content>
           <Form>
-            <Item floatingLabel>
+            <Item floatingLabel error={this.state.name == ''}>
               <Label>Name</Label>
               <Input 
                 onChangeText={(text) => this.setState({name: text})} 
                 value={this.state.name} 
+                error={'#d50000'}
               />
+              {this.state.name == '' && <Icon name='close-circle' /> }
             </Item>
             <Item>
               <Accordion
@@ -162,7 +184,7 @@ export default class CreateWorkout extends Component {
               />
             </Item>
             <View style={{justifyContent: 'center', alignItems: 'center', width: '100%', padding: 10}}>
-              <Button bordered onPress={this.onAddClick} ><Text>Save Exercise</Text></Button>
+              <Button bordered onPress={this.onSaveClick} ><Text>Save Exercise</Text></Button>
             </View>
           <Item>
             <FilterableExerciseTable 
