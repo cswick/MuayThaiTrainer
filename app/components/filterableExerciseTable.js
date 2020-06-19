@@ -45,7 +45,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
                 <TableWrapper key={index} style={styles.row}>
                   {
                     rowData.map((cellData, cellIndex) => (
-                      <TouchableOpacity key={cellIndex} onPress={() => this.props.addToRounds(cellData)}>
+                      <TouchableOpacity key={cellIndex} onPress={() => this.props.addToRounds ? this.props.addToRounds(cellData) : ''}>
                         <View>
                           <Text widthArr={[80]} style={styles.text}>{cellData.name}</Text>
                         </View>
@@ -104,22 +104,6 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
       };
       
       this.handleFilterTextInput = this.handleFilterTextInput.bind(this);
-
-      let exercises = [];
-
-      firebase.firestore()
-      .collection('combinations')
-      .get()
-      .then(querySnapshot => {
-    
-        querySnapshot.forEach(documentSnapshot => {
-          exercises.push(documentSnapshot);
-        });
-
-        this.setState({
-          exercises
-        })
-      });
     }
 
     handleFilterTextInput(filterText) {
@@ -136,7 +120,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
             onFilterTextInput={this.handleFilterTextInput}
           />
           <ExerciseTable
-            exercises={this.state.exercises}
+            exercises={this.props.exercises}
             filterText={this.state.filterText}
             addToRounds={this.props.addToRounds}
           />

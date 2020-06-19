@@ -2,10 +2,10 @@
 Todo:
   Data Model:
     ☐ Remove timer
-    ☐ Change "type" to "notes
+    ☐ Change "type" to "notes"
   GUI: 
     ☐ Create workout
-      ☐ Add exercise to workout  
+      ✔ Add exercise to workout @done(20-06-14 20:28)
       ☐ Custom length of round(time, number of reps, interval, etc.)
 
     ☐ List of previous workouts(including date)

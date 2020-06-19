@@ -19,19 +19,19 @@ export default class Home extends Component {
     render() {
       return (
        <View>
-           <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'purple'}}
-            onPress={() => this.props.navigation.navigate('Workout')}>
-                <Text>Go To Workout</Text>
+           <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'lightblue'}}
+            onPress={() => this.props.navigation.navigate('ListAll', {collection: 'workouts'})}>
+                <Text>View Workouts</Text>
             </Button>
             <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: '#f37735'}}
-            onPress={() => this.props.navigation.navigate('ListAll')}>
-                <Text>View All Exercises</Text>
+            onPress={() => this.props.navigation.navigate('ListAll', {collection: 'exercises'})}>
+                <Text>View Exercises</Text>
             </Button>
             <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'green'}}
             onPress={() => this.props.navigation.navigate('AddExercise')}>
                 <Text>Add Exercise</Text>
             </Button>
-            <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'cyan'}}
+            <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'pink'}}
             onPress={() => this.props.navigation.navigate('CreateWorkout')}>
                 <Text>Create Workout</Text>
             </Button>

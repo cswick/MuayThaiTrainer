@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Container, Fab, Header, Icon, Tab, Tabs, ScrollableTab, View } from 'native-base';
-import ActionButton from 'react-native-action-button';
 import {
   AppRegistry,
   StyleSheet,
@@ -28,20 +27,6 @@ export default class TabList extends Component {
           <Tab heading="Round 4"><Round id={'Sv7ytXDIU6aNkJOxyQNu'} /></Tab>
           <Tab heading="Round 5"><Round id={'yXB6kGhlNCKUM8wsdHbM'} /></Tab>
         </Tabs>
-        <ActionButton buttonColor="#228b22">
-          <ActionButton.Item buttonColor='#9b59b6' title="Add Round" onPress={() => console.log("notes tapped!")}>
-            <Icon type="FontAwesome5" name="skull" />  
-          </ActionButton.Item>
-          <ActionButton.Item buttonColor='#3498db' title="Add Combination" onPress={() => {}}>
-            <Icon type="FontAwesome5" name="book-medical" />
-          </ActionButton.Item>
-          <ActionButton.Item buttonColor='#ff4500' title="Add Workout" onPress={() => {}}>
-            <Icon type="FontAwesome5" name="calendar-plus" />
-          </ActionButton.Item>
-          <ActionButton.Item buttonColor='#1abc9c' title="All Combinations" onPress={() => {}}>
-            <Icon type="FontAwesome5" name="book-dead" />
-          </ActionButton.Item>
-        </ActionButton>
       </Container>
     );
   }

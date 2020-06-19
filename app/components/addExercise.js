@@ -9,44 +9,57 @@ import { Button,
   Input, 
   Label,
   Picker, 
-  Text } from 'native-base';
+  Text,
+  View } from 'native-base';
   import AddStrikesList from './addStrikesList';
   import firebase from 'react-native-firebase';
+  import { Alert } from 'react-native';
+import FilterableExerciseTable from './filterableExerciseTable';
 
 export default class AddExercise extends Component {
     constructor(props) {
         super(props);
         this.state = {
           name: '',
-          length: '',
-          interval: '',
           type: '',
           moves: [],
+          exercises: []
         };
 
         this.onAddClick = this.onAddClick.bind(this);
+
+        let exercises = [];
+
+        firebase.firestore()
+        .collection('exercises')
+        .get()
+        .then(querySnapshot => {
+      
+          querySnapshot.forEach(documentSnapshot => {
+            exercises.push(documentSnapshot);
+          });
+  
+          this.setState({
+            exercises
+          })
+        });
       }
 
-      onAddClick() {
-        firebase.firestore().collection('combinations').doc().set({
+  onAddClick() {
+    firebase.firestore().collection("exercises").where("name", "==", this.state.name)
+    .get()
+    .then((querySnapshot) => {
+      if (querySnapshot.empty) {
+        firebase.firestore().collection('exercises').doc().set({
           name: this.state.name,
-          length: this.state.length,
-          interval: this.state.interval,
+          type: this.state.type
         })
-      .then(function() {
-          console.log("Exercise successfully written!");
-      })
-      .catch(function(error) {
-          console.error("Error writing document: ", error);
-          this.setState({
-            name: '',
-            length: '',
-            type: '',
-            moves: []
-          });
-      });
-      
+      } else{
+        Alert.alert('Exercise already exists.');
       }
+    })
+    .catch(() => {console.log('Error writing exercise to database')})
+  }
 
   render() {
     return (
@@ -59,22 +72,6 @@ export default class AddExercise extends Component {
               <Input 
                 onChangeText={(text) => this.setState({name: text})} 
                 value={this.state.name} 
-              />
-            </Item>
-            <Item floatingLabel >
-              <Label>Length</Label>
-              <Input 
-                onChangeText={(text) => this.setState({length: text})} 
-                value={this.state.length} 
-                keyboardType="number-pad"
-              />
-              </Item>
-            <Item floatingLabel >
-                <Label>Interval</Label>
-              <Input 
-                onChangeText={(text) => this.setState({interval: text})} 
-                value={this.state.interval} 
-                keyboardType="number-pad"
               />
             </Item>
             <Item picker>
@@ -97,7 +94,14 @@ export default class AddExercise extends Component {
            { this.state.type === 'tech' && <Item>
               <AddStrikesList/>
             </Item> }
-            <Button onPress={this.onAddClick} ><Text>Add Exercise</Text></Button>
+            <View style={{justifyContent: 'center', alignItems: 'center', width: '100%', padding: 10}}>
+              <Button onPress={this.onAddClick} ><Text>Add Exercise</Text></Button>
+            </View>
+            <Item>
+            <FilterableExerciseTable 
+              exercises={this.state.exercises}
+            />
+            </Item>
           </Form>
         </Content>
       </Container>
