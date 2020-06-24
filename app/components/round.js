@@ -15,7 +15,9 @@ export default class Round extends Component {
             length: 0,
             timerRunning: false,
         }
-        this.strikes = firebase.firestore().collection('combinations').doc(props.id);
+        //THIS ALL NEEDS REFACTORED BASED ON NEW DATABASE STRUCTURE
+        //NO LONGER USING COMBINATIONS
+        this.strikes = firebase.firestore().collection('combinations').doc(props.route.params.id);
         this.onStartPressed = this.onStartPressed.bind(this);
         this.onResetPressed = this.onResetPressed.bind(this);
     }

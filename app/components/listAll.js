@@ -19,10 +19,10 @@ export default class ListAll extends Component {
       super(props);
 
       this.state = {
-        exercises: []
+        data: []
       }
 
-      let exercises = [];
+      let localData = [];
 
       firebase.firestore()
       .collection(this.props.route.params.collection)
@@ -30,13 +30,19 @@ export default class ListAll extends Component {
       .then(querySnapshot => {
     
         querySnapshot.forEach(documentSnapshot => {
-          exercises.push(documentSnapshot);
+          localData.push(documentSnapshot);
         });
 
         this.setState({
-          exercises
+          data: localData
         })
       });
+
+      this.onClickRecord=this.onClickRecord.bind(this);
+    }
+
+    onClickRecord(workout) {
+      this.props.navigation.navigate('Round', {id: workout.id})
     }
   
     render() {
@@ -47,7 +53,8 @@ export default class ListAll extends Component {
           <Form>
             <Item>
               <FilterableExerciseTable 
-              exercises={this.state.exercises}
+              exercises={this.state.data}
+              onClickRecord={this.onClickRecord}
               />
             </Item>
             </Form>

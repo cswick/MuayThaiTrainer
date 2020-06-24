@@ -23,10 +23,12 @@ export default class Home extends Component {
             onPress={() => this.props.navigation.navigate('ListAll', {collection: 'workouts'})}>
                 <Text>View Workouts</Text>
             </Button>
+            { /* is this even needed??? 
             <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: '#f37735'}}
             onPress={() => this.props.navigation.navigate('ListAll', {collection: 'exercises'})}>
                 <Text>View Exercises</Text>
             </Button>
+            */ }
             <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'green'}}
             onPress={() => this.props.navigation.navigate('AddExercise')}>
                 <Text>Add Exercise</Text>

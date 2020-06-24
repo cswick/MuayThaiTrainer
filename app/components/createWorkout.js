@@ -30,7 +30,7 @@ export default class CreateWorkout extends Component {
         this.onSaveClick = this.onSaveClick.bind(this);
         this.renderHeader = this.renderHeader.bind(this);
         this.renderContent = this.renderContent.bind(this);
-        this.addToRounds = this.addToRounds.bind(this);
+        this.onClickRecord = this.onClickRecord.bind(this);
         this.updateRoundNotes = this.updateRoundNotes.bind(this);
         this.updateRoundLength = this.updateRoundLength.bind(this);
 
@@ -65,7 +65,7 @@ export default class CreateWorkout extends Component {
   
   }
 
-  addToRounds(round) {
+  onClickRecord(round) {
     if (this.state.rounds.length == 0) {
       this.setState({
         rounds: [{
@@ -204,11 +204,11 @@ export default class CreateWorkout extends Component {
               />
             </Item>
             <View style={{justifyContent: 'center', alignItems: 'center', width: '100%', padding: 10}}>
-              <Button bordered onPress={this.onSaveClick} disabled={this.state.name == ''}><Text>Save Exercise</Text></Button>
+              <Button bordered onPress={this.onSaveClick} disabled={this.state.name == ''}><Text>Save Workout</Text></Button>
             </View>
           <Item>
             <FilterableExerciseTable 
-              addToRounds={this.addToRounds}
+              onClickRecord={this.onClickRecord}
               exercises={this.state.exercises}
             />
           </Item>

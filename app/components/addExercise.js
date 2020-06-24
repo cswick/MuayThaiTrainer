@@ -45,6 +45,26 @@ export default class AddExercise extends Component {
         });
       }
 
+  componentDidUpdate(prevState){
+    if(this.state.exercises != prevState.exercises){
+      let exercises = [];
+
+      firebase.firestore()
+      .collection('exercises')
+      .get()
+      .then(querySnapshot => {
+    
+        querySnapshot.forEach(documentSnapshot => {
+          exercises.push(documentSnapshot);
+        });
+
+        this.setState({
+          exercises
+        })
+      });
+    }
+  }   
+
   onAddClick() {
     firebase.firestore().collection("exercises").where("name", "==", this.state.name)
     .get()

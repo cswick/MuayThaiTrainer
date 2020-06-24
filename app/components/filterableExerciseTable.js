@@ -25,15 +25,19 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
     render() {
       const tableData = [];
       const filter = this.props.filterText;
-      this.props.exercises.map((exercise, index) => {
-        const rowData = [];
-        const exerciseName = exercise._data.name ? exercise._data.name : exercise._data.moves.toString()
-        if (exerciseName.indexOf(filter) > -1) {
-          const exerciseType = exercise._data.type || '';
-          rowData.push({name: exerciseName, id: exercise.id});
-          tableData.push(rowData);
-        }
-      })
+      if (this.props.exercises.length < 1){ 
+        tableData.push(['No records available.']);
+      } else {
+        this.props.exercises.map((exercise, index) => {
+          const rowData = [];
+          const exerciseName = exercise._data.name ? exercise._data.name : exercise._data.moves.toString()
+          if (exerciseName.indexOf(filter) > -1) {
+            const exerciseType = exercise._data.type || '';
+            rowData.push({name: exerciseName, id: exercise.id});
+            tableData.push(rowData);
+          }
+        })
+      }
 
       return (
         <View style={styles.container}>
@@ -45,7 +49,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
                 <TableWrapper key={index} style={styles.row}>
                   {
                     rowData.map((cellData, cellIndex) => (
-                      <TouchableOpacity key={cellIndex} onPress={() => this.props.addToRounds ? this.props.addToRounds(cellData) : ''}>
+                      <TouchableOpacity key={cellIndex} onPress={() => this.props.onClickRecord ? this.props.onClickRecord(cellData) : ''}>
                         <View>
                           <Text widthArr={[80]} style={styles.text}>{cellData.name}</Text>
                         </View>
@@ -122,7 +126,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
           <ExerciseTable
             exercises={this.props.exercises}
             filterText={this.state.filterText}
-            addToRounds={this.props.addToRounds}
+            onClickRecord={this.props.onClickRecord}
           />
         </View>
       );
