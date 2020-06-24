@@ -16,6 +16,7 @@
     "@react-native-firebase/firestore": "^6.2.0",
     "@react-navigation/native": "^5.4.0",
     "@react-navigation/stack": "^5.3.7",
+    "logkitty": "^0.7.1",
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
