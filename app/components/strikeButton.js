@@ -10,7 +10,7 @@ export default class StrikeButton extends Component {
     var styles = StyleSheet.create({
       buttonText: {
         fontSize:24,
-        color: 'white'
+        color: 'black'
       },
     });
 

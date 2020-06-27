@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Button, Text, View } from 'native-base';
-import StrikeButton from './ strikeButton';
+import StrikeButton from './strikeButton';
 import firebase from 'react-native-firebase';
 
 export default class Combination extends Component {
@@ -22,9 +22,9 @@ export default class Combination extends Component {
   render() {
     return (
         <View style={{ marginLeft: 15, alignItems: 'flex-start', justifyContent: 'space-between'}}>
-          {this.state.strikes.map((prop, key) => {
+          {this.state.strikes.map((prop, id) => {
             return (
-              <StrikeButton key={prop.key} name={prop.name}></StrikeButton>
+              <StrikeButton key={prop.id} name={prop.name}></StrikeButton>
             );
           })}
         </View>
