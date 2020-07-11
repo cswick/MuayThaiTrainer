@@ -75,7 +75,8 @@ export default class AddExercise extends Component {
       if (querySnapshot.empty) {
         firebase.firestore().collection('exercises').doc().set({
           name: this.state.name,
-          type: this.state.type
+          type: this.state.type,
+          moves: this.state.moves
         }).then(
           this.setState({
             name: '',
@@ -92,7 +93,7 @@ export default class AddExercise extends Component {
   }
 
   addToMoves(exercise) {
-    if(this.state.type === 'tech') {
+    if(this.state.type === 'combo') {
       this.setState({
         moves: [...this.state.moves, {
           name: exercise.name,

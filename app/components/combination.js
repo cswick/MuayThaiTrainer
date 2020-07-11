@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Button, Text, View } from 'native-base';
 import StrikeButton from './strikeButton';
-import firebase from 'react-native-firebase';
 
 export default class Combination extends Component {
     constructor(props){

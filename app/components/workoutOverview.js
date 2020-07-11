@@ -5,15 +5,36 @@ import {
   StyleSheet,
   Text,
 } from 'react-native';
-
+import firebase from 'react-native-firebase';
 import Round from './round';
 
-export default class TabList extends Component {
+export default class WorkoutOverview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
+      rounds: [],
     };
+
+    let rounds = [];
+
+    firebase.firestore()
+    .collection('workouts')
+    .get()
+    .then(querySnapshot => {
+  
+      querySnapshot.forEach(documentSnapshot => {
+        if(documentSnapshot._ref.id === this.props.route.params.id) {
+          documentSnapshot._data.rounds.forEach(round => {
+            rounds.push(round);
+          });
+        }
+      });
+
+      this.setState({
+        rounds
+      })
+    });
   }
 
   render() {
@@ -21,13 +42,11 @@ export default class TabList extends Component {
       <Container contentContainerStyle={styles.container}>
         <Header hasTabs/>
         <Tabs renderTabBar={()=> <ScrollableTab style={{ backgroundColor: "#473857" }}/>}>
-          <Tab heading="Round 1"><Round id={'IMp4bbwmXPHs9R333fyi'} /></Tab>
-          <Tab heading="Round 2"><Round id={'NMzleebKtcsUA82Ep290'} /></Tab>
-          <Tab heading="Round 3"><Round id={'SLweXzGAMeEHG1o1CDxF'} /></Tab>
-          <Tab heading="Round 4"><Round id={'Sv7ytXDIU6aNkJOxyQNu'} /></Tab>
-          <Tab heading="Round 5"><Round id={'yXB6kGhlNCKUM8wsdHbM'} /></Tab>
-        </Tabs>
-      </Container>
+    { this.state.rounds.map((round, index) => {
+      return <Tab heading={round.title} key={index}><Round id={round.id} length={round.length} type={round.type}/></Tab>
+    }) } 
+  </Tabs>
+    </Container>
     );
   }
 }

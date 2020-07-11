@@ -70,8 +70,8 @@ export default class CreateWorkout extends Component {
       this.setState({
         rounds: [{
           title: 'Round 1',
-          content: round.name,
-          id: round.id
+          content: round[0].name,
+          id: round[0].id
         }]
       })
     } else {
@@ -79,8 +79,8 @@ export default class CreateWorkout extends Component {
       this.setState({
         rounds: [...this.state.rounds, {
           title: 'Round ' + nextRound,
-          content: round.name,
-          id: round.id
+          content: round[0].name,
+          id: round[0].id
         }]
       })
     }

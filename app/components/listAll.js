@@ -42,7 +42,8 @@ export default class ListAll extends Component {
     }
 
     onClickRecord(workout) {
-      this.props.navigation.navigate('Round', {id: workout.id})
+      const selectedWorkout = workout[0];
+      this.props.navigation.navigate('WorkoutOverview', {id: selectedWorkout.id})
     }
   
     render() {

@@ -15,18 +15,55 @@ export default class Round extends Component {
             length: 0,
             timerRunning: false,
         }
-        //THIS ALL NEEDS REFACTORED BASED ON NEW DATABASE STRUCTURE
-        //NO LONGER USING COMBINATIONS
-        this.strikes = firebase.firestore().collection('combinations').doc(props.route.params.id);
+
         this.onStartPressed = this.onStartPressed.bind(this);
         this.onResetPressed = this.onResetPressed.bind(this);
-    }
 
-    componentDidMount() {
-        this.unsubscribe = this.strikes.onSnapshot(this.onCollectionUpdate);
-    }
+        let comboLength = 0;
+        let comboType = "";
     
-    componentDidUpdate(prevProps) {
+        const length = this.props.length;
+    
+        let localStrikes = [];
+        let dataFromFirestore = [];
+    
+        firebase.firestore()
+        .collection('exercises')
+        .get()
+        .then(querySnapshot => {
+          
+          querySnapshot.forEach(documentSnapshot => {
+            if(documentSnapshot._ref.id === this.props.data.id) {
+              if(documentSnapshot._data.type === "cardio") {
+                dataFromFirestore.push(documentSnapshot._data.name);
+              }
+              documentSnapshot._data.moves.forEach(strike => {
+                dataFromFirestore.push(strike);
+              });
+            }
+          });
+        });
+    
+        dataFromFirestore.forEach((move, index) => {
+            localStrikes.push({
+              name: move,
+              key: index
+          });
+          })
+    
+          comboLength = length ? length * 60 : 0;
+          comboType = this.props.type;
+    
+        this.setState({
+            strikes: localStrikes,
+            loading: false,
+            type: comboType,
+            length: comboLength
+        })
+      }
+
+    
+    /*componentDidUpdate(prevProps) {
       if(prevProps.data != this.props.data) {
         this.setState({
           id: this.props.id
@@ -58,7 +95,7 @@ export default class Round extends Component {
         length: comboLength
     })
 
-  }
+  }*/
 
   onStartPressed() {
     this.setState({

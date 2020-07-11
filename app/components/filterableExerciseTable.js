@@ -43,21 +43,21 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
         <View style={styles.container}>
           <ScrollView>
           <Table borderStyle={{borderColor: 'transparent'}}>
+          
             <Row data={this.state.tableHead} style={styles.head}/>
             {
               tableData.map((rowData, index) => (
-                <TableWrapper key={index} style={styles.row}>
+                <TouchableOpacity key={index} onPress={() => this.props.onClickRecord ? this.props.onClickRecord(rowData) : ''}>
+                <TableWrapper style={styles.row}>
                   {
-                    rowData.map((cellData, cellIndex) => (
-                      <TouchableOpacity key={cellIndex} onPress={() => this.props.onClickRecord ? this.props.onClickRecord(cellData) : ''}>
-                        <View>
+                    rowData.map((cellData, index) => (
+                        <View key={index}>
                           <Text widthArr={[80]} style={styles.text}>{cellData.name}</Text>
                         </View>
-                      </TouchableOpacity>
-                      
                     ))
                   }
                 </TableWrapper>
+                </TouchableOpacity>
               ))
             }
           </Table>
@@ -134,7 +134,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
   }
 
   const styles = StyleSheet.create({
-    container: { flex: 1, paddingTop: 30, backgroundColor: '#fff' },
+    container: { flex: 1, paddingTop: 30, backgroundColor: '#fff', height: 400 },
     head: { height: 25, backgroundColor: '#808B97' },
     text: { fontSize: 13, paddingTop: 15 },
     row: { flexDirection: 'row', height: 50, borderBottomColor: '#000', borderBottomWidth: 1},
