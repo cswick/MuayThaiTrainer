@@ -19,83 +19,68 @@ export default class Round extends Component {
         this.onStartPressed = this.onStartPressed.bind(this);
         this.onResetPressed = this.onResetPressed.bind(this);
 
-        let comboLength = 0;
-        let comboType = "";
-    
-        const length = this.props.length;
-    
-        let localStrikes = [];
-        let dataFromFirestore = [];
-    
-        firebase.firestore()
-        .collection('exercises')
-        .get()
-        .then(querySnapshot => {
-          
-          querySnapshot.forEach(documentSnapshot => {
-            if(documentSnapshot._ref.id === this.props.data.id) {
-              if(documentSnapshot._data.type === "cardio") {
-                dataFromFirestore.push(documentSnapshot._data.name);
-              }
-              documentSnapshot._data.moves.forEach(strike => {
-                dataFromFirestore.push(strike);
-              });
+
+      let comboLength = 0;
+      let comboType = "";
+  
+      const {id, length, type } = this.props;
+  
+      let localStrikes = [];
+      let dataFromFirestore = [];
+  
+      firebase.firestore()
+      .collection('exercises')
+      .get()
+      .then(querySnapshot => {
+        
+        querySnapshot.forEach(documentSnapshot => {
+          if(documentSnapshot._ref.id === id) {
+            if(documentSnapshot._data.type === "cardio") {
+              dataFromFirestore.push(documentSnapshot._data.name);
+            } else {
+            documentSnapshot._data.moves.forEach(strike => {
+              dataFromFirestore.push(strike.name);
+            });
             }
-          });
+          }
         });
-    
-        dataFromFirestore.forEach((move, index) => {
+
+        comboLength = length ? length * 60 : 0;
+        comboType = this.props.type;
+  
+        if (comboType === 'cardio') {
+          localStrikes.push({
+            name: dataFromFireStore[0].name,
+            key: 0
+          }) 
+        } else {
+          dataFromFirestore.forEach((move, index) => {
             localStrikes.push({
               name: move,
               key: index
-          });
+            });
           })
-    
-          comboLength = length ? length * 60 : 0;
-          comboType = this.props.type;
-    
-        this.setState({
-            strikes: localStrikes,
-            loading: false,
-            type: comboType,
-            length: comboLength
-        })
+        }
+
+      this.setState({
+          strikes: localStrikes,
+          loading: false,
+          type: comboType || '',
+          length: comboLength,
+          timerRunning: false
+      });
+
+      });
       }
 
     
-    /*componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps, prevState) {
       if(prevProps.data != this.props.data) {
         this.setState({
           id: this.props.id
         });
       }
     }
-
-    onCollectionUpdate = (querySnapshot) => {
-    let strikes = [];
-    let comboLength = 0;
-    let comboType = "";
-
-    const { name, moves, length, type } = querySnapshot._data;
-
-      moves.forEach((move, index) => {
-        strikes.push({
-          name: move,
-          key: index
-      });
-      })
-
-      comboLength = length ? length * 60 : 0;
-      comboType = type;
-
-    this.setState({
-        strikes,
-        loading: false,
-        type: comboType,
-        length: comboLength
-    })
-
-  }*/
 
   onStartPressed() {
     this.setState({

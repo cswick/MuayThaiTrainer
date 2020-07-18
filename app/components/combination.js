@@ -23,7 +23,7 @@ export default class Combination extends Component {
         <View style={{ marginLeft: 15, alignItems: 'flex-start', justifyContent: 'space-between'}}>
           {this.state.strikes.map((prop, id) => {
             return (
-              <StrikeButton key={prop.id} name={prop.name}></StrikeButton>
+              <StrikeButton key={id} name={prop.name}></StrikeButton>
             );
           })}
         </View>
