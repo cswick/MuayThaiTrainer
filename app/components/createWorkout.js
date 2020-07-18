@@ -71,7 +71,8 @@ export default class CreateWorkout extends Component {
         rounds: [{
           title: 'Round 1',
           content: round[0].name,
-          id: round[0].id
+          id: round[0].id,
+          type: round.type
         }]
       })
     } else {
@@ -80,7 +81,8 @@ export default class CreateWorkout extends Component {
         rounds: [...this.state.rounds, {
           title: 'Round ' + nextRound,
           content: round[0].name,
-          id: round[0].id
+          id: round[0].id,
+          type: round.type
         }]
       })
     }

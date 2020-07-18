@@ -19,83 +19,69 @@ export default class Round extends Component {
         this.onStartPressed = this.onStartPressed.bind(this);
         this.onResetPressed = this.onResetPressed.bind(this);
 
-        let comboLength = 0;
-        let comboType = "";
-    
-        const length = this.props.length;
-    
-        let localStrikes = [];
-        let dataFromFirestore = [];
-    
-        firebase.firestore()
-        .collection('exercises')
-        .get()
-        .then(querySnapshot => {
-          
-          querySnapshot.forEach(documentSnapshot => {
-            if(documentSnapshot._ref.id === this.props.data.id) {
-              if(documentSnapshot._data.type === "cardio") {
-                dataFromFirestore.push(documentSnapshot._data.name);
-              }
-              documentSnapshot._data.moves.forEach(strike => {
-                dataFromFirestore.push(strike);
-              });
+
+      let comboLength = 0;
+      let comboType = "";
+  
+      const {id, length, type } = this.props;
+  
+      comboLength = length ? length * 60 : 0;
+      comboType = this.props.type;
+
+      let localStrikes = [];
+      let dataFromFirestore = [];
+  
+      firebase.firestore()
+      .collection('exercises')
+      .get()
+      .then(querySnapshot => {
+        
+        querySnapshot.forEach(documentSnapshot => {
+          if(documentSnapshot._ref.id === id) {
+            if(documentSnapshot._data.type === "cardio") {
+              dataFromFirestore.push(documentSnapshot._data.name);
+            } else {
+            documentSnapshot._data.moves.forEach(strike => {
+              dataFromFirestore.push(strike.name);
+            });
             }
-          });
+          }
         });
-    
-        dataFromFirestore.forEach((move, index) => {
+
+        if (comboType === 'cardio') {
+          localStrikes.push({
+            name: dataFromFireStore[0].name,
+            key: 0
+          }) 
+        } else {
+          dataFromFirestore.forEach((move, index) => {
             localStrikes.push({
               name: move,
               key: index
-          });
+            });
           })
-    
-          comboLength = length ? length * 60 : 0;
-          comboType = this.props.type;
-    
-        this.setState({
-            strikes: localStrikes,
-            loading: false,
-            type: comboType,
-            length: comboLength
-        })
+        }
+
+      this.setState({
+        id: Math.random().toString(),
+        strikes: localStrikes,
+        loading: false,
+        type: comboType || '',
+        length: comboLength,
+        timerRunning: false
+      });
+
+      });
       }
 
     
-    /*componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps, prevState) {
       if(prevProps.data != this.props.data) {
         this.setState({
           id: this.props.id
         });
       }
     }
-
-    onCollectionUpdate = (querySnapshot) => {
-    let strikes = [];
-    let comboLength = 0;
-    let comboType = "";
-
-    const { name, moves, length, type } = querySnapshot._data;
-
-      moves.forEach((move, index) => {
-        strikes.push({
-          name: move,
-          key: index
-      });
-      })
-
-      comboLength = length ? length * 60 : 0;
-      comboType = type;
-
-    this.setState({
-        strikes,
-        loading: false,
-        type: comboType,
-        length: comboLength
-    })
-
-  }*/
 
   onStartPressed() {
     this.setState({
@@ -107,7 +93,7 @@ export default class Round extends Component {
     const comboLength = this.state.length ? this.state.length : 0;
 
     this.setState({
-      id: Math.random(),
+      id: Math.random().toString(),
       timerRunning: false,
       length: comboLength,
     })
@@ -120,16 +106,29 @@ export default class Round extends Component {
     })
   }
 
+  componentDidMount(){
+    let comboLength = 0;
+
+    const {id, length, type } = this.props;
+
+    comboLength = length ? length * 60 : 0;
+
+    this.setState({
+      id: Math.random().toString(),
+      timerRunning: false,
+      length: comboLength,
+    })
+  }
+
   render() {
-    const test = this.state.length;
     return (
         <Grid style={{backgroundColor: '#354e79'}}>
-              <Col>
+              <Col style={{marginTop: 10}}>
                 <Combination data={this.state.strikes}/>
               </Col>
               <Col>
                 <Row>
-                <View style={{maringTop: 50}}>
+                <View style={{marginTop: 10}}>
                       <Countdown
                         id={this.state.id}
                         until={this.state.length}
