@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import { Button, 
-  Container, 
   Header, 
-  Content, 
-  Form, 
   Icon, 
-  Item, 
   Input, 
-  Label,
-  Picker, 
-  Text,
-  View } from 'native-base';
+  Text } from 'react-native-elements';
   import AddStrikesList from './addStrikesList';
   import firebase from 'react-native-firebase';
-  import { Alert } from 'react-native';
+  import { Alert, View } from 'react-native';
 import FilterableExerciseTable from './filterableExerciseTable';
 import StrikeButton from './strikeButton';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
@@ -117,10 +110,9 @@ export default class AddExercise extends Component {
 
   render() {
     return (
-      <Container>
+      <View>
         <Header />
-        <Content>
-          <Form>
+          {/* <Form>
             <Item floatingLabel>
               <Label>Name</Label>
               <Input 
@@ -172,10 +164,9 @@ export default class AddExercise extends Component {
               exercises={this.state.exercises}
               onClickRecord={this.addToMoves}
             />
-            </Item>
-          </Form>
-        </Content>
-      </Container>
+            </Item> 
+          </Form> */}
+          </View>
     );
   }
 }

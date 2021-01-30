@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, TouchableHighlight } from 'react-native';
-import { Text, View } from 'native-base';
+import { StyleSheet, TouchableHighlight, View } from 'react-native';
+import { Text } from 'react-native-elements';
 
 
 export default class StrikeButton extends Component {

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Container, Fab, Header, Icon, Tab, Tabs, ScrollableTab, View } from 'native-base';
+import { Header } from 'react-native-elements';
 import {
   AppRegistry,
   StyleSheet,
   Text,
+  View
 } from 'react-native';
 import firebase from 'react-native-firebase';
 import Round from './round';
@@ -39,14 +40,9 @@ export default class WorkoutOverview extends Component {
 
   render() {
     return (
-      <Container contentContainerStyle={styles.container}>
-        <Header hasTabs/>
-        <Tabs renderTabBar={()=> <ScrollableTab style={{ backgroundColor: "#473857" }}/>}>
-    { this.state.rounds.map((round, index) => {
-      return <Tab heading={round.title} key={index}><Round id={round.id} length={round.length} type={round.type}/></Tab>
-    }) } 
-  </Tabs>
-    </Container>
+        <View>
+
+    </View>
     );
   }
 }

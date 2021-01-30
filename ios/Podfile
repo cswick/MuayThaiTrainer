@@ -37,6 +37,8 @@ target 'MuayThaiTrainer' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 
   target 'MuayThaiTrainerTests' do
     inherit! :search_paths
@@ -52,6 +54,14 @@ target 'MuayThaiTrainer-tvOS' do
   target 'MuayThaiTrainer-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
+  end
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      end
+    end
   end
 
 end

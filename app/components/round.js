@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Button, Text, View } from 'native-base';
+import { View } from 'react-native';
+import { Button, Text, } from 'react-native-elements';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Combination from './combination';
 import firebase from 'react-native-firebase';

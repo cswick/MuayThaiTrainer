@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Button, Text, View } from 'native-base';
+import { View } from 'react-native';
 import StrikeButton from './strikeButton';
 
 export default class Combination extends Component {

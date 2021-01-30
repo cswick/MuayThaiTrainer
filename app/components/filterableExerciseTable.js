@@ -1,14 +1,6 @@
 import React, { Component } from 'react'; 
 import { Alert, StyleSheet, View } from 'react-native';
-import { Container, 
-    Header, 
-    Content, 
-    Form, 
-    Icon, 
-    Item, 
-    Input, 
-    Label,
-    Text } from 'native-base';
+import { Text } from 'react-native-elements';
 import firebase from 'react-native-firebase';
 import { Cell, Table, TableWrapper, Row, Rows} from 'react-native-table-component';
 import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
@@ -81,7 +73,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
     render() {
       return (
 
-    <Container style={{height: 90, width: '100%'}}>
+  {/*<Container style={{height: 90, width: '100%'}}>
         <Content>
           <Form>
             <Item floatingLabel>
@@ -93,7 +85,7 @@ import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
             </Item>
           </Form>
         </Content>
-      </Container>
+      </Container> */}
       );
     }
   }

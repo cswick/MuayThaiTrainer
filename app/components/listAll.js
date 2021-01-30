@@ -1,18 +1,8 @@
 import React, { Component } from "react";
 import FilterableExerciseTable from './filterableExerciseTable.js';
-import { Accordion, 
-  Button,
-  Container, 
-  Header, 
-  Content, 
-  Form, 
-  Icon, 
-  Item, 
-  Input, 
-  Label,
-  Picker, 
-  View } from 'native-base';
-  import firebase from 'react-native-firebase';
+import firebase from 'react-native-firebase';
+import { ListItem } from 'react-native-elements';
+import { View } from 'react-native';
 
 export default class ListAll extends Component {
     constructor(props) {
@@ -48,19 +38,18 @@ export default class ListAll extends Component {
   
     render() {
       return (
-
-        <Container>
-        <Content>
-          <Form>
-            <Item>
-              <FilterableExerciseTable 
-              exercises={this.state.data}
-              onClickRecord={this.onClickRecord}
-              />
-            </Item>
-            </Form>
-            </Content>
-            </Container>
+          <View>
+            {
+            this.state.data.map((item, i) => (
+              <ListItem key={i} bottomDivider>
+                <ListItem.Content>
+                  <ListItem.Title>{item._data.name}</ListItem.Title>
+                </ListItem.Content>
+              </ListItem>
+            )) 
+    }
+            </View>
+      
       );
     }
   }

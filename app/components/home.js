@@ -6,7 +6,9 @@ import {
   Animated,
   TouchableOpacity,
 } from "react-native";
-import { Button, Container, Fab, Header, Icon, Tab, Tabs, ScrollableTab } from 'native-base';
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default class Home extends Component {
     constructor(props) {
@@ -19,16 +21,35 @@ export default class Home extends Component {
     render() {
       return (
        <View>
-           <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'lightblue'}}
-            onPress={() => this.props.navigation.navigate('ListAll', {collection: 'workouts'})}>
-                <Text>View Workouts</Text>
-            </Button>
+<Button
+  icon={
+    <Icon
+      name="arrow-right"
+      size={15}
+      color="white"
+    />
+  }
+  onPress={() => this.props.navigation.navigate('ListAll', {collection: 'workouts'})}
+  title="Button with icon component"
+/>
+
+         {/*  <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'lightblue'}}
+            onPress={() => this.props.navigation.navigate('ListAll', {collection: 'workouts'})}
+            title="View Workouts"
+            icon={
+              <Icon
+              name="arrow-right"
+              size={15}
+              color="white"
+              />
+            }
+            />
             { /* is this even needed??? 
             <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: '#f37735'}}
             onPress={() => this.props.navigation.navigate('ListAll', {collection: 'exercises'})}>
                 <Text>View Exercises</Text>
             </Button>
-            */ }
+            
             <Button style={{ margin: 10, justifyContent: 'center', backgroundColor: 'green'}}
             onPress={() => this.props.navigation.navigate('AddExercise')}>
                 <Text>Add Exercise</Text>
@@ -37,6 +58,7 @@ export default class Home extends Component {
             onPress={() => this.props.navigation.navigate('CreateWorkout')}>
                 <Text>Create Workout</Text>
             </Button>
+            */}
        </View>
       );
     }

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Drawer } from 'native-base';
+/*import React, { Component } from 'react';
 
 
 export default class SideDrawer extends Component {
@@ -20,4 +19,4 @@ export default class SideDrawer extends Component {
         </Drawer> 
         ); 
     } 
-  };
+  };*/

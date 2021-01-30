@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { StyleSheet, FlatList, Text, View, Alert, TouchableOpacity, TextInput } from 'react-native';
 
-import { Icon } from 'native-base';
+import { Icon } from 'react-native-elements';
 
 export default class Myproject extends Component {
 

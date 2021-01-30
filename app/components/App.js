@@ -7,9 +7,9 @@ import ListAll from './listAll';
 import CreateWorkout from './createWorkout';
 import AddExercise from './addExercise';
 import Round from './round';
-import { Text, View } from 'native-base';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default class MuayThaiTrainer extends Component {
   render() {
@@ -17,6 +17,7 @@ export default class MuayThaiTrainer extends Component {
   const Stack = createStackNavigator();
 
     return (
+      <SafeAreaProvider>
       <NavigationContainer>{
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={Home} />
@@ -29,6 +30,7 @@ export default class MuayThaiTrainer extends Component {
         </Stack.Navigator>
       }
       </NavigationContainer>
+      </SafeAreaProvider>
     );
   }
 }

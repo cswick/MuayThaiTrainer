@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
-import { Accordion, 
-  Button,
-  Container, 
-  Header, 
-  Content, 
-  Form, 
+import { 
   Icon, 
-  Item, 
-  Input, 
-  Label,
-  Picker, 
-  Text,
-  View } from 'native-base';
+  Text } from 'react-native-elements';
   import { Alert,TextInput } from 'react-native';
   import firebase from 'react-native-firebase';
   import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
@@ -184,7 +174,7 @@ export default class CreateWorkout extends Component {
 
   render() {
     return (
-      <Container>
+     {/* <Container>
         <Content>
           <Form>
             <Item floatingLabel error={this.state.name == ''}>
@@ -216,7 +206,7 @@ export default class CreateWorkout extends Component {
           </Item>
           </Form>
         </Content>
-      </Container>
+     </Container> */}
     );
   }
 }

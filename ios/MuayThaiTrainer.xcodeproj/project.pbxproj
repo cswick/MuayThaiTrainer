@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0026C933771F44DC9FEE3B62 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B38EFB1E3D4FBEBE8D59E9 /* Ionicons.ttf */; };
 		00E356F31AD99517003FC87E /* MuayThaiTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MuayThaiTrainerTests.m */; };
-		0ED67D44E01442E1BD860243 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D22A670D4804B0B901D8963 /* Roboto_medium.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -18,27 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MuayThaiTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MuayThaiTrainerTests.m */; };
-		2FB4CC585F064EAB912ADB03 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F53E9631F62B47AF84340531 /* EvilIcons.ttf */; };
-		366C64BEAC014CF9AB0C4683 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E9846FD924BE4B71AAD8F /* Fontisto.ttf */; };
-		49343C5A2F624AA7A89ADA74 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 296023D09715449796B416C4 /* FontAwesome5_Brands.ttf */; };
-		4BA03B87E6DE485589DD564E /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97126FE25EA64AF2AD61B96A /* Octicons.ttf */; };
-		4C347ABC64064A55885C0C28 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEE8009B3A554CB1AC48F529 /* SimpleLineIcons.ttf */; };
 		5087C96BCFF54EFEC11BDFB6 /* libPods-MuayThaiTrainerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA41E6FF58F73DAEBDA44C28 /* libPods-MuayThaiTrainerTests.a */; };
 		565FF4BA23BCE17000A53D07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 565FF4B923BCE16F00A53D07 /* GoogleService-Info.plist */; };
-		5E5FE8D252124425A61184D3 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F062D2A9C6C4B3CB1DF7632 /* FontAwesome.ttf */; };
 		63B4AEB4D24D7C9A0B3F0472 /* libPods-MuayThaiTrainer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 764EB8B58EC9D778168752B5 /* libPods-MuayThaiTrainer-tvOSTests.a */; };
 		69CABE7C50541DE893BF2983 /* libPods-MuayThaiTrainer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 225249C72F1E420A76BD3CC8 /* libPods-MuayThaiTrainer-tvOS.a */; };
-		73A8413162464BB48DB9F715 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAE8C662CD624C1FB2850222 /* Entypo.ttf */; };
-		8715FFBD5CC047E08EE9C5C9 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE02A6112CC44BDFB63A5D30 /* FontAwesome5_Regular.ttf */; };
-		970C3D7DF28F4B9BAB71628B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD30EDD18A8640BFA2D3ADD0 /* Foundation.ttf */; };
-		B27EFEECD0A544DE9945DCB3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2496B2BF23734EF2A92B285C /* MaterialIcons.ttf */; };
-		B80B47F7570F4DE5A9021F48 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBAE054149441CBF41D28F /* Roboto.ttf */; };
-		BE72301C2CA2405BBA98AE2A /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF5C91F58D48F399407E96 /* AntDesign.ttf */; };
-		D1D57D1281BF4805BE594503 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 630E204656344F22BCA2AD55 /* Feather.ttf */; };
-		D736E531E71149ADB7DAFE5F /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C71695ACEA904963B19515E2 /* FontAwesome5_Solid.ttf */; };
-		DE14698C1C734F8289EC08B5 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BA20C91F675442BAE8BE30E /* Zocial.ttf */; };
-		DE8B201C6C7E48D98E86A26D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4BAF87B78D44C486ABD546 /* MaterialCommunityIcons.ttf */; };
-		F8B789A5F09C473091EA5081 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D513C9FE1F4E8A8A2BC001 /* rubicon-icon-font.ttf */; };
 		FA802A7CEAC79A3B3D557BBF /* libPods-MuayThaiTrainer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 619F7CF92ECFCE1301345989 /* libPods-MuayThaiTrainer.a */; };
 /* End PBXBuildFile section */
 
@@ -71,42 +52,23 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MuayThaiTrainer/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MuayThaiTrainer/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MuayThaiTrainer/main.m; sourceTree = "<group>"; };
-		1D22A670D4804B0B901D8963 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		225249C72F1E420A76BD3CC8 /* libPods-MuayThaiTrainer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuayThaiTrainer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2496B2BF23734EF2A92B285C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		296023D09715449796B416C4 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* MuayThaiTrainer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MuayThaiTrainer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MuayThaiTrainer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MuayThaiTrainer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F9CB6F90A1E18F1C7347AE /* Pods-MuayThaiTrainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainerTests.release.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainerTests/Pods-MuayThaiTrainerTests.release.xcconfig"; sourceTree = "<group>"; };
-		43B38EFB1E3D4FBEBE8D59E9 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		4D9E9846FD924BE4B71AAD8F /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		565FF4B923BCE16F00A53D07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57F7284F115088D747179202 /* Pods-MuayThaiTrainer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer-tvOSTests/Pods-MuayThaiTrainer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		619F7CF92ECFCE1301345989 /* libPods-MuayThaiTrainer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuayThaiTrainer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		630E204656344F22BCA2AD55 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		654C8271EE429406743B1BF7 /* Pods-MuayThaiTrainer-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer-tvOSTests/Pods-MuayThaiTrainer-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		69FBAE054149441CBF41D28F /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		764EB8B58EC9D778168752B5 /* libPods-MuayThaiTrainer-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuayThaiTrainer-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BE01708AFA270CEF93F051 /* Pods-MuayThaiTrainerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainerTests.debug.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainerTests/Pods-MuayThaiTrainerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8BA20C91F675442BAE8BE30E /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		97126FE25EA64AF2AD61B96A /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		981CCBD861C6BD04FA457B00 /* Pods-MuayThaiTrainer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer-tvOS/Pods-MuayThaiTrainer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9959F8FA9CC3826BA8EE5F7D /* Pods-MuayThaiTrainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer.release.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer/Pods-MuayThaiTrainer.release.xcconfig"; sourceTree = "<group>"; };
-		9A4BAF87B78D44C486ABD546 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		9AAF5C91F58D48F399407E96 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		9F062D2A9C6C4B3CB1DF7632 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		AAE8C662CD624C1FB2850222 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		AB48BAAF5591157AD5A5914A /* Pods-MuayThaiTrainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer.debug.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer/Pods-MuayThaiTrainer.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF0DC103B60BE96A5A8548F /* Pods-MuayThaiTrainer-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuayThaiTrainer-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MuayThaiTrainer-tvOS/Pods-MuayThaiTrainer-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		AEE8009B3A554CB1AC48F529 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		C71695ACEA904963B19515E2 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		CE02A6112CC44BDFB63A5D30 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F53E9631F62B47AF84340531 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		F9D513C9FE1F4E8A8A2BC001 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		FA41E6FF58F73DAEBDA44C28 /* libPods-MuayThaiTrainerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuayThaiTrainerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD30EDD18A8640BFA2D3ADD0 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,25 +154,6 @@
 		58CDCE8FF0BD4752B671D43B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9AAF5C91F58D48F399407E96 /* AntDesign.ttf */,
-				AAE8C662CD624C1FB2850222 /* Entypo.ttf */,
-				F53E9631F62B47AF84340531 /* EvilIcons.ttf */,
-				630E204656344F22BCA2AD55 /* Feather.ttf */,
-				9F062D2A9C6C4B3CB1DF7632 /* FontAwesome.ttf */,
-				296023D09715449796B416C4 /* FontAwesome5_Brands.ttf */,
-				CE02A6112CC44BDFB63A5D30 /* FontAwesome5_Regular.ttf */,
-				C71695ACEA904963B19515E2 /* FontAwesome5_Solid.ttf */,
-				4D9E9846FD924BE4B71AAD8F /* Fontisto.ttf */,
-				FD30EDD18A8640BFA2D3ADD0 /* Foundation.ttf */,
-				43B38EFB1E3D4FBEBE8D59E9 /* Ionicons.ttf */,
-				9A4BAF87B78D44C486ABD546 /* MaterialCommunityIcons.ttf */,
-				2496B2BF23734EF2A92B285C /* MaterialIcons.ttf */,
-				97126FE25EA64AF2AD61B96A /* Octicons.ttf */,
-				1D22A670D4804B0B901D8963 /* Roboto_medium.ttf */,
-				69FBAE054149441CBF41D28F /* Roboto.ttf */,
-				F9D513C9FE1F4E8A8A2BC001 /* rubicon-icon-font.ttf */,
-				AEE8009B3A554CB1AC48F529 /* SimpleLineIcons.ttf */,
-				8BA20C91F675442BAE8BE30E /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -354,7 +297,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -377,10 +320,9 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MuayThaiTrainer" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -412,25 +354,6 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				565FF4BA23BCE17000A53D07 /* GoogleService-Info.plist in Resources */,
-				BE72301C2CA2405BBA98AE2A /* AntDesign.ttf in Resources */,
-				73A8413162464BB48DB9F715 /* Entypo.ttf in Resources */,
-				2FB4CC585F064EAB912ADB03 /* EvilIcons.ttf in Resources */,
-				D1D57D1281BF4805BE594503 /* Feather.ttf in Resources */,
-				5E5FE8D252124425A61184D3 /* FontAwesome.ttf in Resources */,
-				49343C5A2F624AA7A89ADA74 /* FontAwesome5_Brands.ttf in Resources */,
-				8715FFBD5CC047E08EE9C5C9 /* FontAwesome5_Regular.ttf in Resources */,
-				D736E531E71149ADB7DAFE5F /* FontAwesome5_Solid.ttf in Resources */,
-				366C64BEAC014CF9AB0C4683 /* Fontisto.ttf in Resources */,
-				970C3D7DF28F4B9BAB71628B /* Foundation.ttf in Resources */,
-				0026C933771F44DC9FEE3B62 /* Ionicons.ttf in Resources */,
-				DE8B201C6C7E48D98E86A26D /* MaterialCommunityIcons.ttf in Resources */,
-				B27EFEECD0A544DE9945DCB3 /* MaterialIcons.ttf in Resources */,
-				4BA03B87E6DE485589DD564E /* Octicons.ttf in Resources */,
-				0ED67D44E01442E1BD860243 /* Roboto_medium.ttf in Resources */,
-				B80B47F7570F4DE5A9021F48 /* Roboto.ttf in Resources */,
-				F8B789A5F09C473091EA5081 /* rubicon-icon-font.ttf in Resources */,
-				4C347ABC64064A55885C0C28 /* SimpleLineIcons.ttf in Resources */,
-				DE14698C1C734F8289EC08B5 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,10 +454,42 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MuayThaiTrainer/Pods-MuayThaiTrainer-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Cpp.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,7 +664,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MuayThaiTrainerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -729,7 +684,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = MuayThaiTrainerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -807,7 +762,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -835,7 +790,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};
@@ -862,7 +817,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuayThaiTrainer-tvOS.app/MuayThaiTrainer-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -889,7 +844,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuayThaiTrainer-tvOS.app/MuayThaiTrainer-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};
@@ -897,6 +852,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -915,6 +871,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -939,7 +896,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -950,6 +907,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -968,6 +926,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -985,7 +944,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
